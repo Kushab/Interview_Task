@@ -1,0 +1,15 @@
+<a ng-href="#home">Back</a>
+<table>
+	<tr>
+<td><div><img ng-src="{{movie.image}}"></div></td>
+	<td><span><b>{{movie.title}}</b></span><span style="margin-left:50px;" class="pg">{{movie.rating}}</span><br><br><br>
+	
+	<span  class="topSpace"> Realase Date   {{movie.date | date:'MMMM d,yyyy'}} </span><br><br>
+	<span> Run Time  {{movie.run_time/3600 | number:0}}hrs {{(movie.run_time%3600)/60 | number:0}}mins</span></td>
+</tr></table>
+<div class="centerButton">
+	<button ng-click="movie.watch=true" ng-hide="movie.watch">Add to watchlist</button>
+	<button ng-click="movie.watch=fasle" ng-show="movie.watch">Added for Watching</button>
+	<button>Preview</button>
+	<button>play</button>
+</div>

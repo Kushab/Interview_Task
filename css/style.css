@@ -1,0 +1,40 @@
+td{
+	padding:50px;
+}
+table{
+	border-spacing:50px;
+	border-collapse: seperate;
+}
+.pg{
+	border: solid black 2px;
+	padding:2px 10px;
+
+}
+.topSpace{
+	margin-top:55px;
+}
+.forSearch{
+	padding-left: 29px;
+	border-radius:10px;
+	width:1000px;
+	position:center;
+	margin-left:100px;
+	margin-top:10px;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAJ5JREFUeNpi+P//PwMQMANxERCfAeI/UBrEZwbJQ9WAFR0A4u1AbAnEbFB6O1ScGaawGoi3wHQiYyBYDZKHKbwHxLo4FOqC5GEKf4Ksw6EQ5IyfIDYTkPEUiNUZsAOQ+F9GRkYJEKcFiDficSOIcRjE4QTiY0C8DuRbqAJLKP8/FP9kQArHUiA+jySJjA8w4LAS5KZd0MAHhaccQIABALsMiBZy4YLtAAAAAElFTkSuQmCC);
+    background-repeat: no-repeat;
+    background-position: 12px 8px;
+}
+
+ul li{
+	display:inline;
+}
+
+.play-button {
+   background-image: url(C:\Users\KhushbuKetan\Desktop\Brijesh Interview Task\image\play.png);
+    background-repeat: no-repeat;
+    background-position: 12px 8px;
+}
+
+.centerButton{
+	margin-left:400px;
+}

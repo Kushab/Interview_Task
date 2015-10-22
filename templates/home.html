@@ -1,0 +1,36 @@
+<label><input type="text" ng-keydown="startPage=0" ng-model="query" placeholder="search" class="forSearch"></label>
+<hr>
+<span style="margin-left:100px;">{{startPage+1}}-{{(startPage+5>=(movies|filter:query).length)?((movies|filter:query).length):(startPage+5)}} of {{(movies|filter:query).length}} results</span>
+
+<span style="margin-left:770px;">Sort By</span>
+<select style="margin-left:10px" ng-model="sortOrder">
+	<option value="date">Date</option>
+	<option value="title">Name</option>
+</select>
+<div class="{{arrow}}" ng-click="arrowChange()"></div>
+<hr>
+<table>
+
+<tr ng-repeat="movie in movies |filter:query | limitTo:5:startPage| orderBy:sortDirect+sortOrder">
+	<td><div ng-click="nextPage(movie)"><img ng-src="{{movie.image}}"></div></td>
+	<td><span><b>{{movie.title | uppercase}}</b></span><span style="margin-left:50px;" class="pg">{{movie.rating}}</span><br>
+	<button class="topSpace" ng-click="movie.watch=true" ng-hide="movie.watch">Add to watchlist</button>
+	<button class="topSpace" ng-click="movie.watch=fasle" ng-show="movie.watch">Added for Watching</button></td>
+	<td><span> Realase Date   {{movie.date | date:'MMMM d,yyyy'}} </span><br><br><br>
+	<span class="topSpace"> Run Time  {{movie.run_time/3600 | number:0}}hrs {{(movie.run_time%3600)/60 | number:0}}mins</span></td>
+</tr>
+</table>
+<div style=" margin: 0 auto; width: 15%;">
+<!-- 	
+<img ng-src="image\pagination_circle.png">
+<img ng-src="image\pagination_circle.png">
+<img ng-src="image\pagination_circle.png"> -->
+<ul>
+	<li><img id ="img1" ng-src='image\{{imgSrc}}'></li>
+	<li><img id ="img2" ng-src='image\{{imgSrc1}}'></li>
+	<li><img id ="img3" ng-src='image\{{imgSrc2}}'></li>
+</div>
+
+<div style=" margin: 0 auto; width: 15%;">
+<button ng-disabled="startPage<=0" ng-click="startPage=startPage-5">Previous</button> <button ng-disabled="startPage>=((movies|filter:query).length-5)" ng-click="startPage=startPage+5 ">Next</button>
+</div>

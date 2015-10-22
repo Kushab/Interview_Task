@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Movie App</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body ng-app="movieApp">
+		
+		<!--Container for pages in Angular SPA-->
+		<div ng-view>
+		</div>
+		<!--end of Container-->
+		
+		<!--Libraries and scripts needed-->
+		<script src="libs/angular.js"></script>
+		<script src="libs/route.js"></script>
+		<script src="scripts/app.js"></script>
+		<script src="scripts/controllers/homeCtrl.js"></script>
+		<script src="scripts/controllers/detailCtrl.js"></script>
+		<!--libraries end-->
+	</body>
+
+	
+</html>
